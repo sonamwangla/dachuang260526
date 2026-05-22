@@ -124,11 +124,12 @@ function devApiPlugin() {
   }
 }
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'github-pages' ? '/-001/' : '/',
   plugins: [vue(), devApiPlugin()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-})
+}))
