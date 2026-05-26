@@ -69,7 +69,9 @@ function error(config: AxiosRequestConfig, status: number, data: unknown) {
 
 function normalizePath(url = '') {
   try {
-    return new URL(url, window.location.origin).pathname.replace(/^\/-001/, '')
+    const path = new URL(url, window.location.origin).pathname
+    // 移除仓库名作为前缀的情况，适配不同的部署环境
+    return path.replace(/^\/dachuang260526/, '').replace(/^\/-001/, '')
   } catch {
     return url
   }
