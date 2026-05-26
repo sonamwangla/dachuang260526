@@ -56,6 +56,12 @@
           {{ loading ? '登录中...' : '登录系统' }}
         </button>
 
+        <div v-if="isGitHubPages" style="margin-top: 12px;">
+          <button type="button" @click="handleDemoLogin" style="background: #edf2f7; color: #2d3748; border-color: #cbd5e0;">
+            演示模式一键登录 (无需后端)
+          </button>
+        </div>
+
         <p v-if="error" class="message error">{{ error }}</p>
 
         <p class="auth-link">
@@ -76,6 +82,14 @@ const password = ref('')
 const loading = ref(false)
 const error = ref('')
 const router = useRouter()
+
+const isGitHubPages = ref(window.location.hostname.includes('github.io'))
+
+const handleDemoLogin = () => {
+  localStorage.setItem('token', 'demo-token-bypass')
+  localStorage.setItem('user', JSON.stringify({ username: 'DemoUser', role: 'admin' }))
+  router.push('/')
+}
 
 const handleLogin = async () => {
   loading.value = true
