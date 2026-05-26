@@ -125,7 +125,7 @@ function devApiPlugin() {
 }
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'github-pages' ? '/-001/' : '/',
+  base: mode === 'github-pages' ? '/dachuang260526/' : '/',
   plugins: [vue(), devApiPlugin()],
   resolve: {
     alias: {
