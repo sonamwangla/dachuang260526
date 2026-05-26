@@ -8,7 +8,7 @@
         <div class="legend-item"><span class="dot ctc"></span> 电信</div>
         <div class="legend-item"><span class="dot cuc"></span> 联通</div>
         <div class="legend-item"><span class="dot danger"></span> 重点优化点</div>
-        <div class="legend-item"><span class="icon-bs">🗼</span> 模拟基站</div>
+        <div class="legend-item"><span class="icon-bs">🗼</span> 基站</div>
       </div>
       <button @click="$emit('toggleHeatmap')" class="btn-tool">🔥 热力图: {{ heatmapVisible ? '开' : '关' }}</button>
     </div>
@@ -76,7 +76,7 @@ const initMap = () => {
   stationLayer = L.layerGroup().addTo(map)
   heatmapLayer = (L as any).heatLayer([], { radius: 25, blur: 15 }).addTo(map)
 
-  // --- 模拟基站生成逻辑 (引入随机抖动，使其分布自然) ---
+  // --- 基站生成逻辑 (引入随机抖动，使其分布自然) ---
   const latMin = 29.626125; const latMax = 29.692442
   const lngMin = 91.039857; const lngMax = 91.207659
   const step = 0.007 // 约 700m 步长，增加抖动空间

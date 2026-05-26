@@ -8,7 +8,7 @@
         <div><span class="dot ctc"></span> 中国电信</div>
         <div><span class="dot cuc"></span> 中国联通</div>
         <div><span class="dot danger"></span> 重点优化点</div>
-        <div><span class="station-symbol"></span> 模拟基站</div>
+        <div><span class="station-symbol"></span> 基站</div>
       </div>
       <button type="button" @click="$emit('toggleHeatmap')">
         热力图：{{ heatmapVisible ? '开' : '关' }}

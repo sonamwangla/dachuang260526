@@ -7,7 +7,7 @@
       </div>
       <div class="nav-center"><h1 class="opt-title">AI 高原信号 3D 仿真中心</h1></div>
       <div class="nav-right">
-        <span class="role-indicator" :class="user.role">权限: {{ user.role === 'admin' ? '完全决策' : '仿真模拟' }}</span>
+        <span class="role-indicator" :class="user.role">权限: {{ user.role === 'admin' ? '完全决策' : '仿真执行' }}</span>
       </div>
     </header>
 

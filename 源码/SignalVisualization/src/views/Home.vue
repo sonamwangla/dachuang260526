@@ -66,7 +66,7 @@
         <div class="feature-card">
           <div class="f-icon">🤖</div>
           <h3>AI 仿真分析</h3>
-          <p>利用 RandomForest 模型预判极弱信号覆盖风险，支持海拔与天气因素的复合模拟。</p>
+          <p>利用 RandomForest 模型预判极弱信号覆盖风险，支持海拔与天气因素的复合评估。</p>
         </div>
         <div class="feature-card">
           <div class="f-icon">✅</div>
@@ -77,7 +77,7 @@
     </section>
 
     <footer class="main-footer">
-      <p>© 2026 西藏高原地区移动信号模拟优化与可视化平台 | 当前角色: {{ roleName }}</p>
+      <p>© 2026 西藏高原地区移动信号智能优化与可视化平台 | 当前角色: {{ roleName }}</p>
     </footer>
 
     <!-- 访客友好提示 -->

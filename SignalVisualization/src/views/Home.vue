@@ -87,7 +87,7 @@
 
     <footer class="footer">
       <span>当前角色：{{ roleName }}</span>
-      <span>西藏高原移动信号模拟优化与可视化平台</span>
+      <span>西藏高原移动信号优化与可视化平台</span>
     </footer>
   </div>
 </template>
