@@ -68,13 +68,9 @@ function error(config: AxiosRequestConfig, status: number, data: unknown) {
 }
 
 function normalizePath(url = '') {
-  try {
-    const path = new URL(url, window.location.origin).pathname
-    // 移除仓库名作为前缀的情况，适配不同的部署环境
-    return path.replace(/^\/dachuang260526/, '').replace(/^\/-001/, '')
-  } catch {
-    return url
-  }
+  // 忽略协议、域名和仓库名，只提取末尾的 API 路径
+  const match = url.match(/\/api\/.*$/)
+  return match ? match[0] : url
 }
 
 if (enabled) {

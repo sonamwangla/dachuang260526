@@ -65,7 +65,7 @@ const handleRegister = async () => {
   success.value = ''
 
   try {
-    await axios.post('/api/auth/register', {
+    await axios.post('./api/auth/register', {
       username: username.value,
       password: password.value,
       role: 'operator'

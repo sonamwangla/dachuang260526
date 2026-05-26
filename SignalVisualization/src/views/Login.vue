@@ -82,7 +82,7 @@ const handleLogin = async () => {
   error.value = ''
 
   try {
-    const res = await axios.post('/api/auth/login', {
+    const res = await axios.post('./api/auth/login', {
       username: username.value,
       password: password.value
     })
