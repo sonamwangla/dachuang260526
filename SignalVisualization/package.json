@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "build:pages": "vue-tsc && vite build --mode github-pages",
+    "build:pages": "vite build --mode github-pages",
     "preview": "vite preview"
   },
   "dependencies": {
